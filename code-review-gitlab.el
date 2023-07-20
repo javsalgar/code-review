@@ -40,12 +40,12 @@
   :group 'code-review
   :link '(custom-group-link 'code-review-github))
 
-(defcustom code-review-gitlab-host "gitlab.com/api"
+(defcustom code-review-gitlab-host "gitlab.eng.vmware.com/api"
   "Host for the Gitlab api if you use the hosted version of Gitlab."
   :group 'code-review-gitlab
   :type 'string)
 
-(defcustom code-review-gitlab-graphql-host "gitlab.com/api"
+(defcustom code-review-gitlab-graphql-host "gitlab.eng.vmware.com/api"
   "Host for Graphql in Gitlab."
   :group 'code-review-gitlab
   :type 'string)
@@ -584,7 +584,7 @@ Optionally sets FALLBACK? to get minimal query."
 Return the blob URL if BLOB? is provided."
   (let ((sha (a-get-in (oref gitlab raw-infos) (list 'diffRefs 'headSha))))
     (if blob?
-        (format "https://gitlab.com/%s/%s/-/blob/%s/%s"
+        (format "https://gitlab.eng.vmware.com/%s/%s/-/blob/%s/%s"
                 (oref gitlab owner)
                 (oref gitlab repo)
                 sha

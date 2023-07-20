@@ -41,7 +41,7 @@
   :type 'string
   :group 'code-review-github)
 
-(defcustom code-review-gitlab-base-url "gitlab.com"
+(defcustom code-review-gitlab-base-url "gitlab.eng.vmware.com"
   "Host used to identify PR URLs from Gitlab."
   :type 'string
   :group 'code-review-gitlab)
